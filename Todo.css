@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    background-image:url(https://img.pikbest.com/back_our/20210317/bg/9b8d7d6fcf404.png!bw700);
+}
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background-image:url(https://wallpaperaccess.com/full/1668918.jpg);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo-app h2 {
+    display: flex;
+    align-items: center;
+    color: #002765;
+    margin-bottom: 10px;
+}
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+.todo-app .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #81d8ee;
+    border-radius: 50px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+.todo-app .row #input-box {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    padding: 10px;
+    font-size: 14px;
+}
+.todo-app .row button {
+    border: 0;
+    outline: 0;
+    padding: 16px 40px;
+    background: #ef720c;
+    color: #fff;
+    border-radius: 40px;
+    cursor: pointer;
+}
+ul li {
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    font-size: 17px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-image: url("images/unchecked.png");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked:before {
+    background-image: url("images/checked.png");
+}
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 22px;
+    line-height: 40px;
+    color: #555;
+}
+ul li span:hover {
+    background: #edeef0;
+}
+
+
+/*extra*/
+
+.outer {
+    display: table;
+    margin: 0 auto;
+    height: 100%
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.main {
+    position: relative;
+    height: 190px;
+    margin: 18px
+}
+
+@media (max-width:550px) {
+    .main {
+        -webkit-transform: scale(0.75);
+        transform: scale(0.75)
+    }
+}
+
+@media (max-width:440px) {
+    .main {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5)
+    }
+}
+
+.buddha {
+    position: relative;
+    width: 128px;
+    height: 190px;
+    -webkit-animation: animUpDown 3s ease-in-out infinite;
+    animation: animUpDown 3s ease-in-out infinite
+}
+
+.buddha .legs {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 128px;
+    height: 50px;
+    border-radius: 50px;
+    background: #F37043
+}
+
+.buddha .tail {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    width: 98px;
+    height: 82px;
+    border-radius: 38px;
+    background: #F37043
+}
+
+.buddha .head {
+    position: absolute;
+    top: 0px;
+    left: 2px;
+    width: 124px;
+    height: 124px;
+    border-radius: 124px;
+    background: #F2BC9B;
+}
+
+.buddha .ears {
+    position: absolute;
+    bottom: 28px;
+    width: 28px;
+    height: 28px;
+    border-radius: 28px;
+    background: #F2BC9B
+}
+
+.buddha .ears.left {
+    left: -10px
+}
+
+.buddha .ears.right {
+    right: -10px
+}
+
+.buddha .hand {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    width: 34px;
+    height: 34px;
+    border-radius: 34px;
+    background: #F2BC9B;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.buddha .mouth {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    width: 16px;
+    height: 6px;
+    margin-left: -12px;
+    border: 5px solid #F05978;
+    border-top: 0;
+    border-radius: 0 0 20px 20px / 0 0 16px 16px
+}
+
+.buddha .circle {
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    background: #F05978;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.buddha .eye {
+    position: absolute;
+    bottom: 50px;
+    width: 10px;
+    height: 5px;
+    border: 6px solid #363635;
+    border-bottom: 0;
+    border-radius: 10px 10px 0 0 / 10px 10px 0 0
+}
+
+.buddha .eye.left {
+    left: 25px
+}
+
+.buddha .eye.right {
+    right: 25px
+}
+
+.shadow {
+    position: absolute;
+    bottom: -40px;
+    display: block;
+    width: 128px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    -webkit-animation: animShadow 3s ease-in-out infinite;
+    animation: animShadow 3s ease-in-out infinite
+}
+
+@-webkit-keyframes animShadow {
+    0%,
+    100% {
+        -webkit-transform: scale(1) rotateX(100deg);
+        transform: scale(1) rotateX(100deg)
+    }
+    50% {
+        -webkit-transform: scale(0.7) rotateX(100deg);
+        transform: scale(0.7) rotateX(100deg)
+    }
+}
+
+@keyframes animShadow {
+    0%,
+    100% {
+        -webkit-transform: scale(1) rotateX(100deg);
+        transform: scale(1) rotateX(100deg)
+    }
+    50% {
+        -webkit-transform: scale(0.7) rotateX(100deg);
+        transform: scale(0.7) rotateX(100deg)
+    }
+}
+
+@-webkit-keyframes animUpDown {
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    50% {
+        -webkit-transform: translateY(-25px);
+        transform: translateY(-25px)
+    }
+}
+
+@keyframes animUpDown {
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    50% {
+        -webkit-transform: translateY(-25px);
+        transform: translateY(-25px)
+    }
+}
+
+.main:hover .buddha .head {
+    -webkit-animation: animTopBottom 0.25s infinite;
+    animation: animTopBottom 0.25s infinite
+}
+
+@-webkit-keyframes animTopBottom {
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    50% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px)
+    }
+}
+
+@keyframes animTopBottom {
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    50% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px)
+    }
+}
